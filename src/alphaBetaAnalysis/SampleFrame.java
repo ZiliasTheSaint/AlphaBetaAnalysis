@@ -43,6 +43,7 @@ import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.text.Document;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 
@@ -2263,6 +2264,14 @@ public class SampleFrame extends JFrame implements ActionListener, ItemListener,
 			resultS=resultS+ "</font></b> ";
 		}
 		
+		//FORCE DELETE OLD DOCUMENT
+		Document doc = textArea.getDocument();
+		doc.putProperty(Document.StreamDescriptionProperty, null);
+		//this is similar to //simTa.selectAll();
+				//simTa.replaceSelection("");
+		// fixed jeditorArea not updating when new alpha/beta analysis is performed on same 
+		// instance. This is unlike gamma annalysis where new result frame is created every 
+		// time.
 		//simTa.append(resultS);
 		htmlToPrint = resultS;
 		//create HTML document============

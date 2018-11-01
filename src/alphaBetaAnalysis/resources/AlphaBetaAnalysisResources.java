@@ -67,7 +67,7 @@ public class AlphaBetaAnalysisResources extends ListResourceBundle{
 			{ "Author.name", "Dan Fulea , fulea.dan@gmail.com" },
 
 			{ "Version", "Version:" },
-			{ "Version.name", "AlphaBeta analysis 1.1" },
+			{ "Version.name", "AlphaBeta analysis 1.2" },
 
 			{
 					"License",
